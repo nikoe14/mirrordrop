@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <title>Rules</title>
+        <link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
+    </head>
+    <body>
+        <div class="dropdown">
+        <button class="dropbtn"><a href="/">Back</a></button>
+        <div class="dropdown-content">
+            <a href="/">Add Rule</a>
+            <a href="/show">Show Rules</a>
+            <a href="/delete">Delete Rule</a>
+        </div>
+        </div>
+        <div id="container">
+            <div class="title">
+                <h1>Rules</h1>
+            </div>
+            <div id="content">
+                {% if iptables %}
+                    {% for n in iptables %}
+                        <li>{{n}}</li>
+                    {% endfor %}
+                {% else %}
+                    <p> {{ msg }}</p>
+                {% endif %}
+            </div>
+        </div>
+    </body>
+</html>

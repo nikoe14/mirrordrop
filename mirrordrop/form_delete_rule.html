@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <title>Rules</title>
+        <link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
+    </head>
+    <body>
+        <div class="dropdown">
+        <button class="dropbtn"><a href="/">Back</a></button>
+        <div class="dropdown-content">
+            <a href="/">Add Rule</a>
+            <a href="/show">Show Rules</a>
+            <a href="/delete">Delete Rule</a>
+        </div>
+        </div>
+        <div id="container">
+            <div class="title">
+                <h1>Rules</h1>
+            </div>
+            <div id="content">
+                {% if iptables %}
+                <form method="post" action="{{ url_for('delete_rule') }}">
+                    {% for n in iptables %}
+                        <input class="input" id={{loop.index}} type="radio" name="rule" value={{loop.index}}><label for={{loop.index}}> {{n}} </label> <br>
+                    {% endfor %}
+                    <input id="button" type="submit" value="Delete"/>
+                <form>
+                {% else %}
+                    <p> {{ msg }}</p>
+                {% endif %}
+            </div>
+        </div>
+    </body>
+</html>

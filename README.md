@@ -11,7 +11,7 @@ The goal of this app is to ** simulate network problems**. For this you can add 
 > - [TinyProxy](https://tinyproxy.github.io/)
 
 ----------
-> ** Installation process **
+> **Installation process **
 
 > - apt-get install python-pip or apt-get install python-virtualenv (for run in a virtual env)
 > - python setup.py install

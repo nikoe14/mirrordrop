@@ -1,7 +1,7 @@
 Application to simulate problems in the network
 ===================
 
-The goal of this app is to ** simulate network problems**. For this you can add rules that allow us to discard a percentage of traffic destined to a host.
+The goal of this app is to **simulate network problems**. For this you can add rules that allow us to discard a percentage of traffic destined to a host.
 
 ----------
 > **Requirements**

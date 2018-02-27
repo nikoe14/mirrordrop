@@ -82,7 +82,7 @@ def newrule():
                         subprocess.Popen(['sudo','iptables', '-A', 'OUTPUT', '-m', 'statistic', '--mode', 'random', '--probability', '0.'+dropaverage, '-j', 'DROP', '-d', '0.0.0.0/0'], stdout=subprocess.PIPE)
                     except subprocess.CalledProcessError as e:
                         return "An error occurred while trying to add a new rule."
-                    return render_template('form_success.html', msg="Success! droping " +dropaverage +"% of traffic to " +target)
+                    return render_template('form_success.html', msg="Success! droping " +dropaverage +"% of traffic to 0.0.0.0/0")
                 #else:
                 #    return render_template('form_error.html', error='Please, check the IP')
             else:

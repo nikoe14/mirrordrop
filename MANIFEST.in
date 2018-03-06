@@ -1,0 +1,2 @@
+recursive-include mirrordrop/templates *
+recursive-include mirrordrop/static *

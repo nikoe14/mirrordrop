@@ -7,8 +7,6 @@ The goal of this app is to **simulate network problems**. For this you can add r
 > **Requirements**
 
 > - [Python](https://www.python.org/)
-> - [Flask](http://flask.pocoo.org/)
-> - [TinyProxy](https://tinyproxy.github.io/)
 
 ----------
 > **Installation process**

@@ -19,21 +19,11 @@ setup(name='mirrordrop',
     author_email='nikoe14@gmail.com',
     license='Apache License 2.0',
     install_requires=install_requires,
+    zip_safe=False,
     classifiers=[
       'Development Status :: 3 - Alpha',
     ],
-    data_files=[(
-      '{prefix}/mirrordrop_templates'.format(prefix=prefix), [
-        'templates/form_delete_rule.html',
-        'templates/form_error.html',
-        'templates/form_show.html',
-        'templates/form_submit.html',
-        'templates/form_success.html',
-      ]), (
-      '{prefix}/mirrordrop_static'.format(prefix=prefix), [
-        'static/style.css',
-      ])
-    ],
+    include_package_data=True,
     packages=['mirrordrop'],
     entry_points= {  # Optional
       'console_scripts': [

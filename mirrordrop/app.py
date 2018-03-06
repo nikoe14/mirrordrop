@@ -2,11 +2,8 @@ from flask import Flask, render_template, request, url_for
 import subprocess
 import sys
 
-app = Flask(
-  __name__,
-  template_folder='{prefix}/mirrordrop_templates'.format(prefix=sys.prefix),
-  static_folder='{prefix}/mirrordrop_static'.format(prefix=sys.prefix),
-)
+app = Flask(__name__)
+
 ip_whitelist = ['127.0.0.1','172.16.0.199']
 
 def white_list():

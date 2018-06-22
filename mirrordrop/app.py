@@ -110,6 +110,10 @@ def delete_rule():
     del_rule(request.form['rule'])
     return render_template('form_success.html', msg="Success!, The Rule was Delete")
 
+@app.after_request
+def filter_headers(response):
+    response.headers["Server"] = "Custom"
+    return response
 
 def main():
     app.run(
